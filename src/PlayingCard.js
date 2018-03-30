@@ -27,8 +27,36 @@ class PlayingCard extends React.Component {
       case 13:
         val = "K";
         break;
+      default:
+        val = this.props.value;
+        break;
     }
-    return <div className="playingCard" />;
+
+    const suit =
+      this.props.suit === "spades" ? (
+        <React.Fragment>&spades;</React.Fragment>
+      ) : this.props.suit === "diamonds" ? (
+        <React.Fragment>♦</React.Fragment>
+      ) : this.props.suit === "hearts" ? (
+        <React.Fragment>&hearts;</React.Fragment>
+      ) : this.props.suit === "clubs" ? (
+        <React.Fragment>&clubs;</React.Fragment>
+      ) : (
+        <React.Fragment>"N/A"</React.Fragment>
+      );
+
+    return (
+      <div className={"playingCard" + " " + this.props.suit}>
+        <div className="valueUpperLeft">{val}</div>
+        <div className="valueUpperRight">{val}</div>
+        <div className="valueLowerRight">{val}</div>
+        <div className="valueLowerLeft">{val}</div>
+        <div className="suitUpperLeft">{suit}</div>
+        <div className="suitUpperRight">{suit}</div>
+        <div className="suitLowerRight">{suit}</div>
+        <div className="suitLowerLeft">{suit}</div>
+      </div>
+    );
   }
 }
 

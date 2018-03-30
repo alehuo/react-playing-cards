@@ -12,22 +12,22 @@ const Suit = ({ children, suit }) => (
 );
 
 const Spades = ({ children }) => (
-  <Suit suit="spades" className="spades">
+  <Suit suit="spades">
     {children}
   </Suit>
 );
 const Clubs = ({ children }) => (
-  <Suit suit="clubs" className="clubs">
+  <Suit suit="clubs">
     {children}
   </Suit>
 );
 const Diamonds = ({ children }) => (
-  <Suit suit="diamonds" className="diamonds">
+  <Suit suit="diamonds">
     {children}
   </Suit>
 );
 const Hearts = ({ children }) => (
-  <Suit suit="hearts" className="hearts">
+  <Suit suit="hearts">
     {children}
   </Suit>
 );
