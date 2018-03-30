@@ -36,7 +36,7 @@ class PlayingCard extends React.Component {
       this.props.suit === "spades" ? (
         <React.Fragment>&spades;</React.Fragment>
       ) : this.props.suit === "diamonds" ? (
-        <React.Fragment>♦</React.Fragment>
+        <React.Fragment>&diams;</React.Fragment>
       ) : this.props.suit === "hearts" ? (
         <React.Fragment>&hearts;</React.Fragment>
       ) : this.props.suit === "clubs" ? (
