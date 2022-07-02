@@ -2,3 +2,6 @@ node_modules/
 .DS_Store
 src/**/*.css
 yarn-error.log
+.vscode
+.parcel-cache
+dist

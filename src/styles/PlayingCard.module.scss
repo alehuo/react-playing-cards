@@ -1,0 +1,97 @@
+.playingCard {
+  font-size: 16px;
+  user-select: none;
+  --playing-card-border-margin-left-right: 6px;
+  --playing-card-border-margin-top-bottom: 7px;
+  border: 1px solid #000000;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  letter-spacing: -5px;
+  text-indent: -5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 88.9mm;
+  width: 57.15mm;
+  position: relative;
+  font-family: arial;
+  display: inline-block;
+
+  &__valueUpperLeft,
+  &__valueLowerRight,
+  &__valueUpperRight,
+  &__valueLowerLeft,
+  &__suitUpperLeft,
+  &__suitUpperRight,
+  &__suitLowerRight,
+  &__suitLowerLeft,
+  &__suitCenter {
+    position: absolute;
+    font-size: 2.8em;
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  &__valueUpperLeft {
+    top: var(--playing-card-border-margin-top-bottom);
+    left: var(--playing-card-border-margin-left-right);
+  }
+
+  &__valueUpperRight {
+    top: var(--playing-card-border-margin-top-bottom);
+    right: var(--playing-card-border-margin-left-right);
+  }
+
+  &__valueLowerRight,
+  &__valueLowerLeft,
+  &__suitLowerLeft,
+  &__suitLowerRight {
+    -moz-transform: rotate(-180deg); /* Gecko */
+    -o-transform: rotate(-180deg); /* Opera */
+    -webkit-transform: rotate(-180deg); /* Webkit */
+    transform: rotate(-180deg);
+  }
+
+  &__valueLowerRight {
+    bottom: var(--playing-card-border-margin-top-bottom);
+    right: var(--playing-card-border-margin-left-right);
+  }
+
+  &__valueLowerLeft {
+    bottom: var(--playing-card-border-margin-top-bottom);
+    left: var(--playing-card-border-margin-left-right);
+  }
+
+  &__suitLowerRight {
+    bottom: 45;
+    right: var(--playing-card-border-margin-left-right);
+  }
+
+  &__suitLowerLeft {
+    bottom: 45;
+    left: var(--playing-card-border-margin-left-right);
+  }
+
+  &__suitUpperLeft {
+    top: 45;
+    left: var(--playing-card-border-margin-left-right);
+  }
+
+  &__suitUpperRight {
+    top: 45;
+    right: var(--playing-card-border-margin-left-right);
+  }
+
+  &__suitCenter {
+    font-size: 10em;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
