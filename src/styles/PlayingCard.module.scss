@@ -1,22 +1,6 @@
 .playingCard {
-  font-size: 16px;
-  user-select: none;
   --playing-card-border-margin-left-right: 6px;
   --playing-card-border-margin-top-bottom: 7px;
-  border: 1px solid #000000;
-  border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
-  -khtml-border-radius: 0.5em;
-  letter-spacing: -5px;
-  text-indent: -5px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  height: 88.9mm;
-  width: 57.15mm;
-  position: relative;
-  font-family: arial;
-  display: inline-block;
 
   &__valueUpperLeft,
   &__valueLowerRight,

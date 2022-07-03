@@ -1,7 +1,8 @@
 import classnames from "classnames";
 import React from "react";
-import * as styles from "./styles/PlayingCard.module.scss";
-import * as suitStyles from "./styles/Suits.module.scss";
+import cardStyles from "./styles/Card.module.scss";
+import styles from "./styles/PlayingCard.module.scss";
+import suitStyles from "./styles/Suits.module.scss";
 import type { Suit } from "./types";
 
 type PlayingCardProps = {
@@ -47,7 +48,11 @@ export const PlayingCard: React.FC<PlayingCardProps> = ({
 
   return (
     <div
-      className={classnames(styles.playingCard, suitStyles[`${suit}`])}
+      className={classnames(
+        cardStyles.card,
+        styles.playingCard,
+        suitStyles[`${suit}`]
+      )}
       {...rest}
     >
       <div className={styles["playingCard__valueUpperLeft"]}>
@@ -56,9 +61,7 @@ export const PlayingCard: React.FC<PlayingCardProps> = ({
       <div className={styles["playingCard__valueLowerRight"]}>
         {resolvedValue}
       </div>
-      <div className={styles["playingCard__suitCenter"]}>
-        {resolvedSuit}
-      </div>
+      <div className={styles["playingCard__suitCenter"]}>{resolvedSuit}</div>
       <div className={styles["playingCard__suitUpperLeft"]}>{resolvedSuit}</div>
       <div className={styles["playingCard__suitLowerRight"]}>
         {resolvedSuit}

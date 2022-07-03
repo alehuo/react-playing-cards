@@ -1,0 +1,22 @@
+.card {
+  font-size: 16px;
+  user-select: none;
+  border: 1px solid #b2aeae;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  height: 88.9mm;
+  width: 57.15mm;
+  position: relative;
+  font-family: arial;
+  display: inline-block;
+  > * {
+    box-sizing: border-box;
+  }
+}
+
+.centerElements {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
