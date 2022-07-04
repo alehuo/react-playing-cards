@@ -23,21 +23,12 @@ export const ColoredCard: React.FC<ColoredCardProps> = ({
     className={classNames(
       cardStyles.card,
       cardStyles.centerElements,
-      styles.animated,
       resolveBgColorStyle(color)
     )}
   >
-    <div className={classNames(styles.innerContainer, styles.silver)}>
+    <div className={classNames(styles.innerContainer)}>
       {title && (
-        <div
-          className={classNames(
-            styles.titleContainer,
-            styles.containerRow,
-            resolveBgColorStyle(color)
-          )}
-        >
-          {title}
-        </div>
+        <div className={classNames(styles.titleContainerRow)}>{title}</div>
       )}
       {image && (
         <div className={classNames(styles.imageContainer, styles.containerRow)}>

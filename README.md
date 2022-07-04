@@ -23,6 +23,8 @@ ReactDOM.render(
 );
 ```
 
+<img src="./example-card.png" width="200" />
+
 ## Installation
 
 Run `npm install`.
