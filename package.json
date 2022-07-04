@@ -1,13 +1,20 @@
 {
-  "name": "react-playing-cards",
+  "name": "@alehuo/react-playing-cards",
   "version": "1.0.0",
   "description": "React card components for various usages",
   "repository": "https://github.com/alehuo/react-card-components",
-  "author": "alehuo",
+  "author": "alehuo <alehuo@alehuo.dev>",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "keywords": [
+    "react",
+    "card games",
+    "playing cards",
+    "magic cards"
+  ],
   "source": "src/index.tsx",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
     "classnames": "^2.3.1",
@@ -28,9 +35,14 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "0.0.13",
     "@types/react": "^17.0.47",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.5",
-    "npm-run-all": "^4.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
     "parcel": "^2.6.2",
     "sass-loader": "^10.3.0",
     "storybook-css-modules": "^1.0.8",
@@ -39,7 +51,9 @@
   "scripts": {
     "build": "parcel build",
     "watch": "parcel watch",
+    "lint": "eslint '**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }

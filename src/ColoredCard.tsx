@@ -1,9 +1,9 @@
-import classNames from "classnames";
-import React from "react";
-import cardStyles from "./styles/Card.module.scss";
-import styles from "./styles/ColoredCard.module.scss";
+import classNames from 'classnames'
+import React from 'react'
+import cardStyles from './styles/Card.module.scss'
+import styles from './styles/ColoredCard.module.scss'
 
-type Color = "gold" | "silver" | "indigo" | "crimson";
+type Color = 'gold' | 'silver' | 'indigo' | 'crimson';
 type ColoredCardProps = {
   color: Color;
   title?: React.ReactNode;
@@ -11,13 +11,13 @@ type ColoredCardProps = {
   image?: string;
 };
 
-const resolveBgColorStyle = (c: Color) => styles[`${c}`];
+const resolveBgColorStyle = (c: Color) => styles[`${c}`]
 
 export const ColoredCard: React.FC<ColoredCardProps> = ({
   title,
   description,
   image,
-  color,
+  color
 }) => (
   <div
     className={classNames(
@@ -47,4 +47,4 @@ export const ColoredCard: React.FC<ColoredCardProps> = ({
       )}
     </div>
   </div>
-);
+)
