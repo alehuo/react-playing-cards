@@ -1,8 +1,6 @@
 name: Publish Package to npm
 on:
-  push:
-    tags:
-      - '**'
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
