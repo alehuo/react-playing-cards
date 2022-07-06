@@ -14,6 +14,7 @@
   font-family: "Sigmar One", cursive;
   display: grid;
   padding-top: 8px;
+  font-size: 20px;
   grid-template-rows: 37px minmax(min-content, max-content) 70px;
   grid-template-columns: calc(100% - 12px);
   justify-content: center;

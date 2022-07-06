@@ -9,7 +9,7 @@ type ColoredCardProps = {
   title?: React.ReactNode;
   description?: React.ReactNode;
   image?: string;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 const resolveBgColorStyle = (c: Color) => styles[`${c}`]
 
@@ -17,7 +17,8 @@ export const ColoredCard: React.FC<ColoredCardProps> = ({
   title,
   description,
   image,
-  color
+  color,
+  ...rest
 }) => (
   <div
     className={classNames(
@@ -25,6 +26,7 @@ export const ColoredCard: React.FC<ColoredCardProps> = ({
       cardStyles.centerElements,
       resolveBgColorStyle(color)
     )}
+    {...rest}
   >
     <div className={classNames(styles.innerContainer)}>
       {title && (
